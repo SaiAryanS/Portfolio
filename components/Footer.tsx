@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-[var(--border)] py-10 px-6">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-[var(--text-muted)]">
-          © {year} {portfolio.name}. All rights reserved.
+          © {year} {portfolio.name}. 
         </p>
 
         <div className="flex items-center gap-5">
