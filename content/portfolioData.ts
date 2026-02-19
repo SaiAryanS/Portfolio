@@ -104,7 +104,7 @@ AI-powered tools to DevOps-automated pipelines.`,
     },
     {
       category: 'DevOps & Cloud',
-      items: ['Docker', 'Jenkins', 'Git', 'Minikube', 'AWS', 'Azure', 'CI/CD', 'Cypress'],
+      items: ['Docker', 'Jenkins', 'Git', 'Minikube', 'AWS', 'Azure', 'CI/CD', 'Cypress', 'Linux / Unix'],
     },
   ],
 
