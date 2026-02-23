@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { FadeIn } from './FadeIn'
 import { portfolio } from '@/content/portfolioData'
 
@@ -40,9 +41,21 @@ export function About() {
             </div>
           </FadeIn>
 
-          {/* Right: Achievements + Certifications */}
+          {/* Right: Photo + Achievements */}
           <FadeIn delay={0.15}>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-8">
+
+              {/* Photo */}
+              <div className="relative w-full overflow-hidden rounded-2xl border border-[var(--border)]" style={{ aspectRatio: '4/5' }}>
+                <Image
+                  src="/AryanFormal.jpg"
+                  alt="Sai Aryan Soma"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
 
               {/* Achievements */}
               <div>
@@ -57,21 +70,6 @@ export function About() {
                     >
                       <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
                       {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Certifications */}
-              <div>
-                <h3 className="text-xs font-medium tracking-widest uppercase text-[var(--text-muted)] mb-4">
-                  Certifications
-                </h3>
-                <ul className="space-y-3">
-                  {portfolio.certifications.map((cert) => (
-                    <li key={cert.name} className="flex flex-col gap-0.5">
-                      <span className="text-sm font-medium text-[var(--text)]">{cert.name}</span>
-                      <span className="text-xs text-[var(--text-muted)]">{cert.issuer}</span>
                     </li>
                   ))}
                 </ul>
